@@ -1,5 +1,4 @@
 ---
-quar---
 title: "pgi"
 ---
 
