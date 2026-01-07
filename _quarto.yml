@@ -3,10 +3,25 @@ project:
   output-dir: docs
 
 website:
-  title: "pgi"
+  title: "PGI 2026"
   navbar:
     left:
       - href: index.qmd
         text: Início
       - href: about.qmd
         text: Sobre
+      - href: 2025/supera/
+        text: Ano 2025  
+        
+        
+  page-footer:
+    right: "Built with [Quarto](https://quarto.org/)"
+    left: "&copy; Copyright 2026, Charles Souza"
+
+format:
+  html: 
+    theme: nome
+    number-sections: true
+    toc: true 
+lang: "pt"
+editor: source       

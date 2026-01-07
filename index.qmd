@@ -1,11 +1,9 @@
 ---
-title: "pgi"
+title: "PGI"
 ---
 
-This is a Quarto website.
-
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+Levantameto preliminar de informações sobre invovação e empreededorismo no ambiente da AUSPIN.
 
 ```{r}
-1 + 1
+#| echo: false 
 ```
