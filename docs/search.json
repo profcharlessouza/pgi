@@ -46,7 +46,7 @@
     "href": "2025/supera/index.html",
     "title": "Startups 2025",
     "section": "",
-    "text": "A base de dados consolidada em 2025 da Supera abrange 35 empresas, das quais 28 forneceram dados mensuráveis."
+    "text": "A base de dados consolidada em 2025 da Supera abrange 35 empresas, das quais 28 forneceram dados mensuráveis.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMúltiplos segmentos em linhas diferentes."
   },
   {
     "objectID": "2025/supera/index.html#supera",
@@ -59,7 +59,49 @@
     "objectID": "2025/supera/index.html#estágio-de-desenvolvimento",
     "href": "2025/supera/index.html#estágio-de-desenvolvimento",
     "title": "Startups 2025",
-    "section": "2 Estágio de desenvolvimento",
-    "text": "2 Estágio de desenvolvimento\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMúltiplos segmentos em linhas diferentes."
+    "section": "2.1 Estágio de desenvolvimento",
+    "text": "2.1 Estágio de desenvolvimento"
+  },
+  {
+    "objectID": "2025/IPEN/index.html",
+    "href": "2025/IPEN/index.html",
+    "title": "Startups 2025",
+    "section": "",
+    "text": "{r} #| echo: false\npacman::p_load(tidyverse, janitor)\nIPEN\nA base de dados consolidada em 2025 da USP/IPEN abrange xx empresas, das quais yy forneceram dados mensuráveis.\nEstágio de desenvolvimento\n{r} #| echo: false #| warning: false #supera_2025 &lt;- Supera_Parque |&gt; # select(1:12) |&gt; # clean_names() supera_2025 &lt;- read_csv(“supera_2025.csv”)\n{r} #| echo: false\nsupera_2025\\(x12_estagio_de_desenvolvimento &lt;- factor(\n  supera_2025\\)x12_estagio_de_desenvolvimento, levels = c(“Validação”, “Tração”, “Operação”, “Escala”) )\nlibrary(dplyr) library(ggplot2)\nsupera_2025 %&gt;% filter(!is.na(x12_estagio_de_desenvolvimento)) %&gt;% ggplot(aes(x = x12_estagio_de_desenvolvimento)) + geom_bar(fill = “#5d8aa8”) + geom_text( stat = “count”, aes(label = after_stat(count)), hjust = -0.1 ) + coord_flip() + labs( title = “Estágio de Desenvolvimento das Startups (ordem TRL)”, x = “Estágio (TRL)”, y = “Quantidade” ) + theme_bw()\n{r} #| echo: false\nsupera_2025 %&gt;% filter(!is.na(x6_segmento), x6_segmento != ““) %&gt;% ggplot(aes(x = x6_segmento)) + geom_bar(fill =”#5d8aa8”) + geom_text( stat = “count”, aes(label = after_stat(count)), hjust = -0.1 ) + coord_flip() + labs( title = “Distribuição das Startups por Segmento”, x = “Segmento”, y = “Quantidade” ) + theme_bw() + scale_y_continuous(expand = expansion(mult = c(0, 0.1)))\nMúltiplos segmentos em linhas diferentes.\n{r} #| echo: false\nsupera_2025 %&gt;% # filtra registros válidos filter(!is.na(x6_segmento), x6_segmento != ““) %&gt;% # separa múltiplos segmentos em linhas diferentes separate_rows(x6_segmento, sep =”,\\s*“) %&gt;% # remove espaços extras mutate(x6_segmento = trimws(x6_segmento)) %&gt;% # conta frequência de cada segmento e transforma em factor ordenado count(x6_segmento, sort = TRUE) %&gt;% mutate(x6_segmento = factor(x6_segmento, levels = rev(x6_segmento))) %&gt;% # plota ggplot(aes(x = x6_segmento, y = n)) + geom_bar(stat =”identity”, fill = “#5d8aa8”) + geom_text(aes(label = n), hjust = -0.1) + coord_flip() + labs( title = “Distribuição das Startups por Segmento”, x = “Segmento”, y = “Quantidade” ) + theme_bw() + scale_y_continuous(expand = expansion(mult = c(0, 0.1)))"
+  },
+  {
+    "objectID": "2025/supera/index.html#segmentos",
+    "href": "2025/supera/index.html#segmentos",
+    "title": "Startups 2025",
+    "section": "2.2 Segmentos",
+    "text": "2.2 Segmentos\n\n\n\n\n\n\n\n\n\nMúltiplos segmentos em linhas diferentes."
+  },
+  {
+    "objectID": "2025/empreendedorismo/index.html#estágio-de-desenvolvimento",
+    "href": "2025/empreendedorismo/index.html#estágio-de-desenvolvimento",
+    "title": "Startups 2025",
+    "section": "2.1 Estágio de desenvolvimento",
+    "text": "2.1 Estágio de desenvolvimento"
+  },
+  {
+    "objectID": "2025/empreendedorismo/index.html#segmentos",
+    "href": "2025/empreendedorismo/index.html#segmentos",
+    "title": "Startups 2025",
+    "section": "2.2 Segmentos",
+    "text": "2.2 Segmentos\n\n\n\n\n\n\n\n\n\nMúltiplos segmentos em linhas diferentes."
+  },
+  {
+    "objectID": "2025/empreendedorismo/index.html",
+    "href": "2025/empreendedorismo/index.html",
+    "title": "Startups 2025",
+    "section": "",
+    "text": "A base de dados consolidada em 2025 da USP/IPEN abrange 42 empresas, das quais 35 forneceram dados mensuráveis."
+  },
+  {
+    "objectID": "2025/empreendedorismo/index.html#segmento",
+    "href": "2025/empreendedorismo/index.html#segmento",
+    "title": "Startups 2025",
+    "section": "",
+    "text": "A base de dados consolidada em 2025 da USP/IPEN abrange 42 empresas, das quais 35 forneceram dados mensuráveis."
   }
 ]
