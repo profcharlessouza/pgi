@@ -8,8 +8,8 @@ website:
     left:
       - href: index.qmd
         text: Início
-      - text: Grandes Projetos
-        href: https://SEU-ENDERECO-DO-SHINY
+      - href: grandes/
+        text: Grandes Projetos
       - href: 2025/empreendedorismo/
         text: Ano 2025  
 
