@@ -7,10 +7,57 @@ editor: visual
 ```{r}
 #| echo: false
 
-pacman::p_load(tidyverse, janitor)
+pacman::p_load(tidyverse, janitor, readxl)
 ```
 
-## Supera
+# USP/IPEN
+
+A base de dados consolidada em 2025 da USP/IPEN abrange 42 empresas, das quais 35 forneceram dados mensuráveis.
+
+<!-- Trabalhando os dados brutos -->
+
+```{r}
+#| echo: false
+#| eval: true
+#| warning: false
+#USP_IPEN_1 <- read_excel("C:/Users/Charles/Charles/startups/2025/startups_2025/USP_IPEN_1.xlsx")
+
+#USP_IPEN <- USP_IPEN_1 |> 
+#  select(1:11) |> 
+#  clean_names()
+
+#write_csv(USP_IPEN, "USP_IPEN_2025.csv")
+USP_IPEN <- read_csv("USP_IPEN_2025.csv")
+```
+
+## Segmento
+
+```{r}
+#| echo: false
+#| warning: false
+
+USP_IPEN |> 
+  filter(!is.na(x6_segmento), x6_segmento != "") |> 
+  ggplot(aes(x = x6_segmento)) +
+  geom_bar(fill = "#7a848b") +
+  geom_text(
+    stat = "count",
+    aes(label = after_stat(count)),
+    hjust = -0.1
+  ) +
+  coord_flip() +
+  labs(
+    title = "Distribuição das Startups por Segmento",
+    x = "Segmento",
+    y = "Quantidade"
+  ) +
+  theme_bw() +
+  scale_y_continuous(expand = expansion(mult = c(0, 0.1)))
+  
+  
+```
+
+# Supera
 
 A base de dados consolidada em 2025 da Supera abrange 35 empresas, das quais 28 forneceram dados mensuráveis.
 
@@ -55,6 +102,8 @@ supera_2025 %>%
 
 
 ```
+
+## Segmentos
 
 ```{r}
 #| echo: false
@@ -108,3 +157,7 @@ supera_2025 %>%
   scale_y_continuous(expand = expansion(mult = c(0, 0.1)))
 
 ```
+
+# EsalqTec
+
+# Habits

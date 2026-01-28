@@ -8,11 +8,11 @@ website:
     left:
       - href: index.qmd
         text: Início
-      - href: about.qmd
-        text: Sobre
-      - href: 2025/supera/
+      - text: Grandes Projetos
+        href: https://SEU-ENDERECO-DO-SHINY
+      - href: 2025/empreendedorismo/
         text: Ano 2025  
-        
+
         
   page-footer:
     right: "Built with [Quarto](https://quarto.org/)"

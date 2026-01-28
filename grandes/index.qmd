@@ -1,0 +1,36 @@
+---
+title: "Grandes Projetos"
+format: html
+---
+
+## Projetos de Pesquisa da USP
+
+Levantamento dos principais programas e grandes projetos de pesquisa desenvolvidos na Universidade de São Paulo (USP).
+
+---
+
+### EMBRAPII
+
+Apoia projetos de pesquisa aplicada e inovação em parceria com a indústria, promovendo o desenvolvimento tecnológico por meio da cooperação entre universidades, institutos de pesquisa e empresas.
+
+### CPE / CPA
+
+Centros de Pesquisa em Engenharia que integram pesquisa de fronteira, formação de recursos humanos e transferência de tecnologia, com forte participação de empresas parceiras.
+
+### CEPIDs
+
+Centros dedicados à pesquisa científica, inovação e difusão do conhecimento, atuando em temas estratégicos e multidisciplinares com impacto acadêmico e social.
+
+### CEPIX
+
+Programa institucional da USP voltado à continuidade e ao fortalecimento de centros de pesquisa, inovação e difusão de excelência.
+
+### CCD
+
+Centros voltados à produção de conhecimento científico aplicado a desafios sociais, econômicos e ambientais, com foco em políticas públicas e desenvolvimento sustentável.
+
+---
+
+👉 **Acesse o painel interativo de projetos:**
+
+- [Abrir painel interativo](https://auspin.shinyapps.io/grandes-projetos-usp/)
